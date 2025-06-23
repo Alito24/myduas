@@ -19,7 +19,7 @@
         }
 
         .logo {
-            position: fixed;
+            position: absolute;
             top: 20px;
             left: 20px;
             z-index: 1000;
@@ -43,6 +43,15 @@
             max-width: 1400px;
             margin: 0 auto;
             padding-top: 170px;
+        }
+
+        .top-right-text {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: #333;
+            font-size: 16px;
+            z-index: 1000;
         }
 
         .section {
@@ -253,6 +262,8 @@
             .popup-content {
                 padding: 30px 20px;
                 border-radius: 15px;
+                max-width: 95vw;
+                width: 95vw;
             }
 
             .popup-text {
@@ -262,6 +273,12 @@
             .cursor-icon {
                 width: 24px;
                 height: 24px;
+            }
+
+            .top-right-text {
+                font-size: 14px;
+                top: 10px;
+                right: 10px;
             }
         }
 
@@ -310,6 +327,7 @@
     <a href="#" class="logo">
         <img src="myduas.png" alt="MyDuas Logo">
     </a>
+    <div class="top-right-text">Make dua for me and my family 🙂</div>
     
     <div class="container" id="container">
     </div>
