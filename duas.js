@@ -7,6 +7,20 @@ const duas = [
         book: 'Quran 23:97-98'
     },
     {
+        section: 'protection',
+        title: 'Protection from Hellfire',
+        text: 'Our Lord! surely we believe, therefore forgive us our faults and save us from the chastisement of the fire.',
+        atext: 'ٱلَّذِينَ يَقُولُونَ رَبَّنَآ إِنَّنَآ ءَامَنَّافَٱغْفِرْ لَنَا ذُنُوبَنَا وَقِنَا عَذَابَ ٱلنَّارِ',
+        book: 'Quran 3:16'
+    },
+    {
+        section: 'forgiveness',
+        title: "Wronging one's self",
+        text: 'Our Lord! We have wronged ourselves. If You do not forgive us and have mercy on us, we will certainly be lost.',
+        atext: 'رَبَّنَا ظَلَمْنَا أَنفُسَنَا وَإنْ لَمْ تَغْفِرْلَنَا وَتَرْحَمْنَا لَنَكُونَنَّ مِنَ الخَاسِرِينَ',
+        book: 'Quran 7:23'
+    },
+    {
         section: 'marriage',
         title: 'Righteous spouse and children',
         text: 'Our Lord! Bless us with ˹pious˺ spouses and offspring who will be the joy of our hearts, and make us models for the righteous.',
