@@ -9,7 +9,11 @@ const sections = [
     },
     {
         id: 'health',
-        name: 'Health & Healing'
+        name: 'Health'
+    },
+    {
+        id: 'wealth',
+        name: 'Wealth'
     },
     {
         id: 'marriage',
