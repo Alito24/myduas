@@ -226,7 +226,6 @@
             font-size: calc(24px + 0.5vw) !important;
         }
 
-        /* Mobile Responsiveness */
         @media (max-width: 768px) {
             body {
                 padding: 10px;
@@ -323,7 +322,6 @@
             }
         }
 
-        /* Auto font sizing for long text */
         .auto-resize {
             font-size: calc(14px + 0.5vw);
         }
@@ -381,7 +379,6 @@
                 const duasGrid = document.createElement('div');
                 duasGrid.className = 'duas-grid';
                 
-                // Filter duas for this section
                 const sectionDuas = duas.filter(dua => dua.section === section.id);
                 
                 sectionDuas.forEach(dua => {
@@ -416,11 +413,9 @@
             document.getElementById('popup-source').textContent = dua.book;
             document.getElementById('popup').style.display = 'block';
             
-            // Reset language buttons
             document.getElementById('english-btn').classList.add('active');
             document.getElementById('arabic-btn').classList.remove('active');
             
-            // Auto-resize text if needed
             autoResizeText();
             document.body.style.overflow = 'hidden';
         }
@@ -458,10 +453,8 @@
             const containerWidth = textElement.parentElement.clientWidth;
             const containerHeight = textElement.parentElement.clientHeight;
             
-            // Reset font size
             textElement.style.fontSize = textElement.classList.contains('arabic') ? '24px' : '18px';
             
-            // Check if text overflows and adjust
             if (textElement.scrollHeight > containerHeight * 0.6 || textElement.scrollWidth > containerWidth) {
                 textElement.classList.add('auto-resize');
             } else {
@@ -469,26 +462,22 @@
             }
         }
 
-        // Close popup when clicking outside
         document.getElementById('popup').addEventListener('click', function(e) {
             if (e.target === this) {
                 closePopup();
             }
         });
 
-        // Close popup with Escape key
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') {
                 closePopup();
             }
         });
 
-        // Initialize the page
         document.addEventListener('DOMContentLoaded', function() {
             renderSections();
         });
 
-        // Handle window resize
         window.addEventListener('resize', function() {
             if (currentDua) {
                 autoResizeText();
