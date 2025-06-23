@@ -183,6 +183,10 @@
             hyphens: auto;
         }
 
+        .popup-text.arabic {
+            font-size: 22px;
+        }
+
         .language-buttons {
             display: flex;
             gap: 15px;
@@ -427,14 +431,16 @@
             const popupText = document.getElementById('popup-text');
             
             if (lang === 'english') {
-                popupText.textContent = currentDua.text;
-                englishBtn.classList.add('active');
-                arabicBtn.classList.remove('active');
-            } else {
-                popupText.textContent = currentDua.atext;
-                arabicBtn.classList.add('active');
-                englishBtn.classList.remove('active');
-            }
+            popupText.textContent = currentDua.text;
+            popupText.classList.remove('arabic');
+            englishBtn.classList.add('active');
+            arabicBtn.classList.remove('active');
+        } else {
+            popupText.textContent = currentDua.atext;
+            popupText.classList.add('arabic');
+            arabicBtn.classList.add('active');
+            englishBtn.classList.remove('active');
+        }
             
             autoResizeText();
         }
