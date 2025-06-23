@@ -184,7 +184,7 @@
         }
 
         .popup-text.arabic {
-            font-size: 28px;
+            font-size: 24px;
         }
 
         .language-buttons {
@@ -220,6 +220,10 @@
             font-style: italic;
             text-align: center;
             margin-top: 20px;
+        }
+
+        .auto-resize.arabic {
+            font-size: calc(18px + 0.5vw) !important;
         }
 
         /* Mobile Responsiveness */
@@ -327,6 +331,10 @@
         @media (max-width: 768px) {
             .auto-resize {
                 font-size: calc(12px + 0.8vw);
+            }
+
+            .auto-resize.arabic {
+                font-size: calc(16px + 0.8vw) !important;
             }
         }
     </style>
