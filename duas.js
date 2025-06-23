@@ -9,7 +9,7 @@ const duas = [
     {
         section: 'marriage',
         title: 'Righteous spouse and children',
-        text: 'Our Lord, grant us from among our wives and offspring comfort to our eyes and make us an example for the righteous.',
+        text: 'Our Lord! Bless us with ˹pious˺ spouses and offspring who will be the joy of our hearts, and make us models for the righteous.',
         atext: 'رَبَّنَا هَبْ لَنَا مِنْ أَزْوَاجِنَا وَذُرِّيَّاتِنَا قُرَّةَ أَعْيُنٍ وَاجْعَلْنَا لِلْمُتَّقِينَ إِمَامًا',
         book: 'Quran 25:74'
     },
