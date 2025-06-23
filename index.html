@@ -459,7 +459,7 @@
             const containerHeight = textElement.parentElement.clientHeight;
             
             // Reset font size
-            textElement.style.fontSize = '18px';
+            textElement.style.fontSize = textElement.classList.contains('arabic') ? '24px' : '18px';
             
             // Check if text overflows and adjust
             if (textElement.scrollHeight > containerHeight * 0.6 || textElement.scrollWidth > containerWidth) {
