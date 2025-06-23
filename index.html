@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyDuas - A collection of every dua for every situation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .logo {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+            width: 400px;
+            height: 250px;
+            transition: transform 0.3s ease;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(139, 90, 150, 0.3);
+        }
+
+        .logo:hover {
+            transform: translateY(-2px);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding-top: 160px;
+        }
+
+        .section {
+            background: linear-gradient(135deg, #8B5A96, #6B4C93);
+            border-radius: 20px;
+            margin-bottom: 40px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(107, 76, 147, 0.3);
+        }
+
+        .section-title {
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 30px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .duas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .dua-card {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            min-height: 120px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .dua-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        }
+
+        .dua-text {
+            color: #333;
+            font-size: 16px;
+            line-height: 1.5;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .cursor-icon {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            width: 32px;
+            height: 32px;
+            opacity: 0.6;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23666"><path d="M13.64 21.97c-.16-.3-.26-.66-.26-1.05v-5.49l2.62 2.52c.39.39 1.02.39 1.41 0s.39-1.02 0-1.41l-4.17-4.17c-.78-.78-2.05-.78-2.83 0l-4.17 4.17c-.39.39-.39 1.02 0 1.41s1.02.39 1.41 0l2.62-2.52v5.49c0 .39-.1.75-.26 1.05-.41.78-.06 1.75.79 2.16s1.75.06 2.16-.79c.16-.3.26-.66.26-1.05z"/></svg>') no-repeat center;
+            background-size: contain;
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0,0,0,0.8);
+            z-index: 2000;
+            backdrop-filter: blur(5px);
+        }
+
+        .popup-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 90vw;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 40px;
+            height: 40px;
+            background: #ff4757;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .close-btn:hover {
+            background: #ff3838;
+            transform: scale(1.1);
+        }
+
+        .popup-text {
+            color: #333;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            text-align: center;
+            word-wrap: break-word;
+            hyphens: auto;
+        }
+
+        .language-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .lang-btn {
+            padding: 12px 25px;
+            border: 2px solid #8B5A96;
+            background: white;
+            color: #8B5A96;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .lang-btn.active {
+            background: #8B5A96;
+            color: white;
+        }
+
+        .lang-btn:hover {
+            background: #8B5A96;
+            color: white;
+        }
+
+        .popup-source {
+            color: #666;
+            font-style: italic;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .logo {
+                width: 300px;
+                height: 190px;
+                top: 10px;
+                left: 10px;
+            }
+
+            .container {
+                padding-top: 220px;
+            }
+
+            .duas-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 15px;
+            }
+
+            .dua-card {
+                padding: 15px;
+                min-height: 100px;
+            }
+
+            .dua-text {
+                font-size: 14px;
+            }
+
+            .section-title {
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+
+            .section {
+                padding: 20px;
+                margin-bottom: 30px;
+            }
+
+            .popup-content {
+                padding: 30px 20px;
+                border-radius: 15px;
+            }
+
+            .popup-text {
+                font-size: 16px;
+            }
+
+            .cursor-icon {
+                width: 24px;
+                height: 24px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .duas-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+            }
+
+            .dua-card {
+                padding: 12px;
+                min-height: 80px;
+            }
+
+            .dua-text {
+                font-size: 13px;
+            }
+
+            .popup-content {
+                padding: 25px 15px;
+            }
+
+            .language-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .lang-btn {
+                width: 120px;
+            }
+        }
+
+        /* Auto font sizing for long text */
+        .auto-resize {
+            font-size: calc(14px + 0.5vw);
+        }
+
+        @media (max-width: 768px) {
+            .auto-resize {
+                font-size: calc(12px + 0.8vw);
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="#" class="logo">
+        <img src="https://via.placeholder.com/400x250/8B5A96/FFFFFF?text=MyDuas+Logo" alt="MyDuas Logo">
+    </a>
+    
+    <div class="container" id="container">
+    </div>
+
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <button class="close-btn" onclick="closePopup()">×</button>
+            <div class="popup-text" id="popup-text"></div>
+            <div class="language-buttons">
+                <button class="lang-btn active" id="english-btn" onclick="switchLanguage('english')">English</button>
+                <button class="lang-btn" id="arabic-btn" onclick="switchLanguage('arabic')">Arabic</button>
+            </div>
+            <div class="popup-source" id="popup-source"></div>
+        </div>
+    </div>
+
+    <script src="sections.js"></script>
+    <script src="duas.js"></script>
+    <script>
+        let currentDua = null;
+        let currentLanguage = 'english';
+
+        function renderSections() {
+            const container = document.getElementById('container');
+            
+            sections.forEach(section => {
+                const sectionDiv = document.createElement('div');
+                sectionDiv.className = 'section';
+                
+                const sectionTitle = document.createElement('h2');
+                sectionTitle.className = 'section-title';
+                sectionTitle.textContent = section.name;
+                
+                const duasGrid = document.createElement('div');
+                duasGrid.className = 'duas-grid';
+                
+                // Filter duas for this section
+                const sectionDuas = duas.filter(dua => dua.section === section.id);
+                
+                sectionDuas.forEach(dua => {
+                    const duaCard = document.createElement('div');
+                    duaCard.className = 'dua-card';
+                    duaCard.onclick = () => openPopup(dua);
+                    
+                    const duaText = document.createElement('div');
+                    duaText.className = 'dua-text';
+                    duaText.textContent = dua.title;
+                    
+                    const cursorIcon = document.createElement('div');
+                    cursorIcon.className = 'cursor-icon';
+                    
+                    duaCard.appendChild(duaText);
+                    duaCard.appendChild(cursorIcon);
+                    duasGrid.appendChild(duaCard);
+                });
+                
+                sectionDiv.appendChild(sectionTitle);
+                sectionDiv.appendChild(duasGrid);
+                container.appendChild(sectionDiv);
+            });
+        }
+
+        function openPopup(dua) {
+            currentDua = dua;
+            currentLanguage = 'english';
+            
+            document.getElementById('popup-text').textContent = dua.text;
+            document.getElementById('popup-source').textContent = dua.book;
+            document.getElementById('popup').style.display = 'block';
+            
+            // Reset language buttons
+            document.getElementById('english-btn').classList.add('active');
+            document.getElementById('arabic-btn').classList.remove('active');
+            
+            // Auto-resize text if needed
+            autoResizeText();
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        function switchLanguage(lang) {
+            if (!currentDua) return;
+            
+            currentLanguage = lang;
+            const englishBtn = document.getElementById('english-btn');
+            const arabicBtn = document.getElementById('arabic-btn');
+            const popupText = document.getElementById('popup-text');
+            
+            if (lang === 'english') {
+                popupText.textContent = currentDua.text;
+                englishBtn.classList.add('active');
+                arabicBtn.classList.remove('active');
+            } else {
+                popupText.textContent = currentDua.atext;
+                arabicBtn.classList.add('active');
+                englishBtn.classList.remove('active');
+            }
+            
+            autoResizeText();
+        }
+
+        function autoResizeText() {
+            const textElement = document.getElementById('popup-text');
+            const containerWidth = textElement.parentElement.clientWidth;
+            const containerHeight = textElement.parentElement.clientHeight;
+            
+            // Reset font size
+            textElement.style.fontSize = '18px';
+            
+            // Check if text overflows and adjust
+            if (textElement.scrollHeight > containerHeight * 0.6 || textElement.scrollWidth > containerWidth) {
+                textElement.classList.add('auto-resize');
+            } else {
+                textElement.classList.remove('auto-resize');
+            }
+        }
+
+        // Close popup when clicking outside
+        document.getElementById('popup').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closePopup();
+            }
+        });
+
+        // Close popup with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closePopup();
+            }
+        });
+
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', function() {
+            renderSections();
+        });
+
+        // Handle window resize
+        window.addEventListener('resize', function() {
+            if (currentDua) {
+                autoResizeText();
+            }
+        });
+    </script>
+</body>
+</html>
