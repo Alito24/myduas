@@ -8,6 +8,13 @@ const duas = [
     },
     {
         section: 'protection',
+        title: 'Protection from devils when entering the bathroom',
+        text: 'O Allah, I seek refuge with You from male and female devils.',
+        atext: 'اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْخُبُثِ وَالْخَبَائِثِ',
+        book: "Sunan an-Nasa'i 19"
+    },
+    {
+        section: 'protection',
         title: 'Protection from evil creation',
         text: 'I seek refuge in the Perfect Word of Allah from the evil of what He created',
         atext: 'أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ',
@@ -33,6 +40,13 @@ const duas = [
         text: 'Our Lord! We have wronged ourselves. If You do not forgive us and have mercy on us, we will certainly be lost.',
         atext: 'رَبَّنَا ظَلَمْنَا أَنفُسَنَا وَإنْ لَمْ تَغْفِرْلَنَا وَتَرْحَمْنَا لَنَكُونَنَّ مِنَ الخَاسِرِينَ',
         book: 'Quran 7:23'
+    },
+    {
+        section: 'health',
+        title: "Body, hearing and eyesight",
+        text: 'Our Lord! We have wronged ourselves. If You do not forgive us and have mercy on us, we will certainly be lost.',
+        atext: 'اللّهُـمَّ عافِـني في بَدَنـي ، اللّهُـمَّ عافِـني في سَمْـعي ، اللّهُـمَّ عافِـني في بَصَـري ، لا إلهَ إلاّ أَنْـتَ',
+        book: 'Sunan Abi Dawud 5090'
     },
     {
         section: 'marriage',
