@@ -14,6 +14,13 @@ const duas = [
         book: 'Quran 3:16'
     },
     {
+        section: 'protection',
+        title: 'Protection from diseases',
+        text: 'O Allah, I seek refuge in You from leprosy, madness, elephantiasis, and evil diseases.',
+        atext: 'اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْبَرَصِ وَالْجُنُونِ وَالْجُذَامِ وَمِنْ سَيِّئِ الأَسْقَامِ',
+        book: 'Sunan Abi Dawud 1554'
+    },
+    {
         section: 'forgiveness',
         title: "Wronging one's self",
         text: 'Our Lord! We have wronged ourselves. If You do not forgive us and have mercy on us, we will certainly be lost.',
