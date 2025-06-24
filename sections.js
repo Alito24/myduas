@@ -16,6 +16,10 @@ const sections = [
         name: 'Wealth'
     },
     {
+        id: 'knowledge',
+        name: 'Knowledge'
+    },
+    {
         id: 'marriage',
         name: 'Marriage'
     },
