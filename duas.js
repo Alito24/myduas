@@ -49,6 +49,20 @@ const duas = [
         book: 'Sunan Abi Dawud 5090'
     },
     {
+        section: 'wealth',
+        title: "Knowledge, provision and acceptable deeds",
+        text: 'O Allah, I ask You for beneficial knowledge, goodly provision and acceptable deeds',
+        atext: 'اللَّهُمَّ إِنِّي أَسْأَلُكَ عِلْمًا نَافِعًا، وَرِزْقًا طَيِّبًا، وَعَمَلاً مُتَقَبَّلاً',
+        book: 'Sunan Ibn Majah 925'
+    },
+    {
+        section: 'knowledge',
+        title: "Knowledge, provision and acceptable deeds",
+        text: 'O Allah, I ask You for beneficial knowledge, goodly provision and acceptable deeds',
+        atext: 'اللَّهُمَّ إِنِّي أَسْأَلُكَ عِلْمًا نَافِعًا، وَرِزْقًا طَيِّبًا، وَعَمَلاً مُتَقَبَّلاً',
+        book: 'Sunan Ibn Majah 925'
+    },
+    {
         section: 'marriage',
         title: 'Righteous spouse and children',
         text: 'Our Lord! Bless us with ˹pious˺ spouses and offspring who will be the joy of our hearts, and make us models for the righteous.',
