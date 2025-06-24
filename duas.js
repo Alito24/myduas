@@ -1,10 +1,17 @@
 const duas = [
     {
         section: 'protection',
-        title: 'Protection from evil',
+        title: 'Protection from devils',
         text: 'My Lord, I seek refuge in You from the incitements of the devils, (97) And I seek refuge in You, my Lord, lest they be present with me. (98)',
         atext: 'رَّبِّ أَعُوذُ بِكَ مِنۡ هَمَزَٰتِ ٱلشَّيَٰطِينِ 97 وَأَعُوذُ بِكَ رَبِّ أَن يَحۡضُرُونِ 98',
         book: 'Quran 23:97-98'
+    },
+    {
+        section: 'protection',
+        title: 'Protection from evil creation',
+        text: 'I seek refuge in the Perfect Word of Allah from the evil of what He created',
+        atext: 'أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ',
+        book: 'Sahih Muslim 2708b, 2709a'
     },
     {
         section: 'protection',
