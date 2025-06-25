@@ -49,6 +49,13 @@ const duas = [
         book: 'Quran 20:25-28'
     },
     {
+        section: 'protection',
+        title: "Protection from one's nafs",
+        text: 'Oh Allah, I seek protection in you from the evil of my hearing, from the evil of my sight, from the evil of my tongue, from the evil of my heart, and from the evil of my passion.',
+        atext: 'اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ شَرِّ سَمْعِي وَمِنْ شَرِّ بَصَرِي وَمِنْ شَرِّ لِسَانِي وَمِنْ شَرِّ قَلْبِي وَمِنْ شَرِّ مَنِيِّي',
+        book: 'Sunan Abi Dawud 1551'
+    },
+    {
         section: 'forgiveness',
         title: "Wronging one's self",
         text: 'Our Lord! We have wronged ourselves. If You do not forgive us and have mercy on us, we will certainly be lost.',
