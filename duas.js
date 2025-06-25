@@ -35,6 +35,13 @@ const duas = [
         book: 'Sunan Abi Dawud 1554'
     },
     {
+        section: 'protection',
+        title: 'Protection from hardship',
+        text: 'O Allah, there is no ease other than what You make easy. If You please You ease sorrow.',
+        atext: 'اللَّهُمَّ لاَ سَهْلاً إِلّاَ مَا جَعَلّتَهٌ سَهْلاً وَأَنّتَ تَجّعَلَ الحَزَنَ إِذَا شِئتَ سَهْلاً',
+        book: 'Sahih Ibn Hibban 2427'
+    },
+    {
         section: 'forgiveness',
         title: "Wronging one's self",
         text: 'Our Lord! We have wronged ourselves. If You do not forgive us and have mercy on us, we will certainly be lost.',
