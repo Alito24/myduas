@@ -84,6 +84,13 @@ const duas = [
         book: 'Sunan Ibn Majah 925'
     },
     {
+        section: 'wealth',
+        title: "Laziness, stinginess and debt",
+        text: 'O Allah, I seek refuge in You from sadness, grief, helplessness, laziness, being stingy, overwhelming debt, and the overpowering of men.',
+        atext: 'اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْهَمِّ وَالْحَزَنِ وَالْعَجْزِ وَالْكَسَلِ وَالْبُخْلِ وَضَلَعِ الدَّيْنِ وَغَلَبَةِ الرِّجَالِ',
+        book: 'Jami` at-Tirmidhi 3484'
+    },
+    {
         section: 'knowledge',
         title: "Knowledge, provision and acceptable deeds",
         text: 'O Allah, I ask You for beneficial knowledge, goodly provision and acceptable deeds',
