@@ -42,6 +42,13 @@ const duas = [
         book: 'Sahih Ibn Hibban 2427'
     },
     {
+        section: 'protection',
+        title: 'Protection from anxiety',
+        text: 'My Lord! Open my heart, and make my task easy for me, loosen the knot in my tongue so that they may understand my speech.',
+        atext: 'رَبِّ اشْرَحْ لِي صَدْرِي وَيَسِّرْ لِي أَمْرِي وَاحْلُلْ عُقْدَةً مِنْ لِسَانِي يَفْقَهُوا قَوْلِي',
+        book: 'Quran 20:25-28'
+    },
+    {
         section: 'forgiveness',
         title: "Wronging one's self",
         text: 'Our Lord! We have wronged ourselves. If You do not forgive us and have mercy on us, we will certainly be lost.',
