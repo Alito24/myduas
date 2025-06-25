@@ -56,6 +56,13 @@ const duas = [
         book: 'Sunan Abi Dawud 1551'
     },
     {
+        section: 'protection',
+        title: "Protection from deviation",
+        text: 'Our Lord, let not our hearts deviate after You have guided us and grant us from Yourself mercy. Indeed, You are the Bestower.',
+        atext: 'رَبَّنَا لَا تُزِغْ قُلُوبَنَا بَعْدَ إِذْ هَدَيْتَنَا وَهَبْ لَنَا مِن لَّدُنكَ رَحْمَةً ۚ إِنَّكَ أَنتَ الْوَهَّابُ',
+        book: 'Quran 3:8'
+    },
+    {
         section: 'forgiveness',
         title: "Wronging one's self",
         text: 'Our Lord! We have wronged ourselves. If You do not forgive us and have mercy on us, we will certainly be lost.',
