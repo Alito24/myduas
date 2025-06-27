@@ -22,6 +22,13 @@ const duas = [
     },
     {
         section: 'protection',
+        title: 'Test',
+        text: 'Test',
+        atext: 'ل',
+        book: 'test'
+    },
+    {
+        section: 'protection',
         title: 'Protection from Hellfire',
         text: 'Our Lord! surely we believe, therefore forgive us our faults and save us from the chastisement of the fire.',
         atext: 'ٱلَّذِينَ يَقُولُونَ رَبَّنَآ إِنَّنَآ ءَامَنَّافَٱغْفِرْ لَنَا ذُنُوبَنَا وَقِنَا عَذَابَ ٱلنَّارِ',
