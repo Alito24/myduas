@@ -77,6 +77,13 @@ const duas = [
         book: 'Sunan Abi Dawud 5090'
     },
     {
+        section: 'health',
+        title: "Dua of Prophet Ayyub (AS)",
+        text: 'Behold, disease has struck me and You are the Most Merciful of those that are merciful.',
+        atext: 'أَنِّي مَسَّنِيَ الضُّرُّ وَأَنتَ أَرْحَمُ الرَّاحِمِينَ',
+        book: 'Quran 21:83'
+    },
+    {
         section: 'wealth',
         title: "Knowledge, provision and acceptable deeds",
         text: 'O Allah, I ask You for beneficial knowledge, goodly provision and acceptable deeds',
