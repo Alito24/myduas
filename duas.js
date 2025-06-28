@@ -24,7 +24,7 @@ const duas = [
         section: 'protection',
         title: 'Protection from Hellfire',
         text: 'Our Lord! surely we believe, therefore forgive us our faults and save us from the chastisement of the fire.',
-        atext: 'ٱلَّذِينَ يَقُولُونَ رَبَّنَآ إِنَّنَآ ءَامَنَّافَٱغْفِرْ لَنَا ذُنُوبَنَا وَقِنَا عَذَابَ ٱلنَّارِ',
+        atext: 'ٱلَّذِينَ يَقُولُونَ رَبَّنَآ إِنَّنَآ ءَامَنَّا فَٱغْفِرْ لَنَا ذُنُوبَنَا وَقِنَا عَذَابَ ٱلنَّارِ',
         book: 'Quran 3:16'
     },
     {
