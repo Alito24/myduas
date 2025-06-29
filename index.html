@@ -466,24 +466,13 @@
             
             textElement.style.fontSize = textElement.classList.contains('arabic') ? '24px' : '18px';
             
-            if (textElement.classList.contains('arabic')) {
-                if (textElement.textContent.trim().length < 30) {
-                    textElement.classList.add('auto-resize');
-                } else {
-                    if (
-                        textElement.scrollHeight > containerHeight * 0.6 ||
-                        textElement.scrollWidth > containerWidth
-                    ) {
-                        textElement.classList.add('auto-resize');
-                    } else {
-                        textElement.classList.remove('auto-resize');
-                    }
-                }
+             if (textElement.classList.contains('arabic')) {
+                textElement.classList.add('auto-resize');
             } else {
-                if (
-                    textElement.scrollHeight > containerHeight * 0.6 ||
-                    textElement.scrollWidth > containerWidth
-                ) {
+                const containerWidth = textElement.parentElement.clientWidth;
+                const containerHeight = textElement.parentElement.clientHeight;
+
+                if (textElement.scrollHeight > containerHeight * 0.6 || textElement.scrollWidth > containerWidth) {
                     textElement.classList.add('auto-resize');
                 } else {
                     textElement.classList.remove('auto-resize');
