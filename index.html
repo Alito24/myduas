@@ -185,7 +185,7 @@
         }
 
         .popup-text.arabic {
-            font-size: 32px;
+            font-size: 24px;
             text-align: right;
             direction: rtl;
             font-family: 'Arial', 'Tahoma', sans-serif;
@@ -227,6 +227,9 @@
             margin-top: 20px;
         }
 
+        .auto-resize.arabic {
+            font-size: calc(24px + 0.5vw) !important;
+        }
 
         @media (max-width: 768px) {
             body {
@@ -283,10 +286,6 @@
                 font-size: 16px;
             }
 
-            .popup-text.arabic {
-                font-size: 20px;
-            }
-
             .popup-title {
                 padding-top: 25px;
             }
@@ -339,6 +338,10 @@
         @media (max-width: 768px) {
             .auto-resize {
                 font-size: calc(12px + 0.8vw);
+            }
+
+            .auto-resize.arabic {
+                font-size: calc(18px + 0.8vw) !important;
             }
         }
     </style>
@@ -463,15 +466,10 @@
             
             textElement.style.fontSize = textElement.classList.contains('arabic') ? '24px' : '18px';
             
-            if (!textElement.classList.contains('arabic')) {
-                const containerWidth = textElement.parentElement.clientWidth;
-                const containerHeight = textElement.parentElement.clientHeight;
-
-                if (textElement.scrollHeight > containerHeight * 0.6 || textElement.scrollWidth > containerWidth) {
-                    textElement.classList.add('auto-resize');
-                } else {
-                    textElement.classList.remove('auto-resize');
-                }
+            if (textElement.scrollHeight > containerHeight * 0.6 || textElement.scrollWidth > containerWidth) {
+                textElement.classList.add('auto-resize');
+            } else {
+                textElement.classList.remove('auto-resize');
             }
         }
 
